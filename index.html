@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    
+    <div align = 'center' id = 'start-window'>
+        <div id = 'start-window-text'>Tetris</div>
+        <button class = 'button' id = 'start-button' onclick = 'closeStartWindow()'>Start</button>
+        <button class = 'button' id = 'open-settings-window' onclick = 'openSettingsWindow()'>Settings</button>
+    </div>
+
+    <div align = 'center' id = 'settings-window'>
+        <div id = 'close-settings-window' onclick = 'closeSettingsWindow()'>?</div>
+
+        <div id = 'field-width-settings'>
+            <p style = 'font-size: 3vw;'>Setting the field size</p>
+
+            <div>
+                <span style = 'font-size: 2vw'>Field width</span><br><br>
+                <input id = 'field-width' type = 'range' min = 10 max = 20 value = 26 oninput = 'document.getElementById("field-width-output").innerHTML = rows = document.getElementById("field-width").value'>
+                <span id  = 'field-width-output'>26</span><br><br>
+
+                <span style = 'font-size: 2vw'>Field height</span><br><br>
+                <input id = 'field-height' type = 'range' min = 10 max = 20 value = 30 oninput = 'document.getElementById("field-height-output").innerHTML = columns =document.getElementById("field-height").value'>
+                <span id  = 'field-height-output'>20</span>
+            </div>
+        </div>
+    </div>
+
+    <div align = 'center' id = 'result-window'>
+        <div id = 'result-window-text'></div>
+        <div id = 'spent-time'></div>
+        <button class = 'button' id = 'restart-button' onclick = 'restart()'>Replay</button>    
+        <button class = 'button' onclick = 'openSettingsWindow()'>Settings</button>   
+    </div>
+
+    <canvas id = 'tetris-canvas'></canvas>
+
+    <script src="tetris.js"></script>
+
+</body>
+
+</html>

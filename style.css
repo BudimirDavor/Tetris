@@ -1,0 +1,164 @@
+* {
+    margin:  0;
+    padding: 0;
+    -webkit-user-select: none;
+}
+
+body {
+    position: fixed;
+    background: #2D2D2D;
+    color: #FFF;
+    font-family: Arial;
+    font-size: 1vw;
+    width:  100%;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.button {
+    transition: .5s background, 3s opacity;
+    outline: none;
+    background: #FFF;
+    color: #333;
+    font-family: Arial;
+    font-size: 4.5vw;
+    width: 30vw;
+    height: 6vw;
+    margin-top: 30px;
+    border: none;
+    border-radius: 3vw;}
+    .button:hover {
+        background: #C8C8C8;
+}
+
+#start-window {
+    transition: top 1.2s ease-in-out, opacity .2s;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width:  100%;
+    height: 100%;
+    top:     0px;
+    left:    0px;
+    z-index: 99;}
+    #start-window-text {
+        opacity: 0;
+        transition: 2s opacity;
+        font-size: 14vw;}
+    #start-button {
+        opacity: 0;}
+    #open-settings-window {
+        opacity: 0;}
+    #open-help-window {
+        opacity: 0;}
+    #open-exit-window {
+        opacity: 0;
+}
+
+#settings-window {
+    transition: left 1s;
+    background: #222E;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width:  100%;
+    height: 100%;
+    top:     0px;
+    left:  -100%;
+    z-index: 104;}
+    #close-settings-window {
+        display: inline;
+        position: absolute;
+        width:  6vw;
+        height: 6vw;
+        font-size: 6vw;
+        right: 0;
+        top:   0;
+        margin: .3vw;
+        cursor: pointer;}
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background-color: #222;
+        border: .15vw solid #EEE;
+        width:  1.6vw;
+        height: 1.6vw;
+        border-radius: 30px;
+        cursor: pointer;}
+    #field-width-settings {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background: #222D;
+        width: 40vw;
+        height: 20vw;
+        border-radius: 15px;
+        border: 1px solid #333;}
+    #field-width {
+        -webkit-appearance: none;
+        outline: none;
+        display: inline-block;
+        width: 20vw;
+        height: 1.6vw;
+        background: #666;
+        border-radius: 15px;}
+    #field-width-output {
+        display: inline-block;
+        /*vertical-align: top;*/
+        font-size: 2vw;
+        width: 2vw;
+        height: 1vw;
+    }
+
+    #field-height-settings {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background: #222D;
+        width: 30vw;
+        height: 15vw;
+        border-radius: 15px;
+        border: 1px solid #333;}
+    #field-height {
+        -webkit-appearance: none;
+        outline: none;
+        display: inline-block;
+        width: 20vw;
+        height: 1.6vw;
+        background: #666;
+        border-radius: 15px;}
+    #field-height-output {
+        display: inline-block;
+        /*vertical-align: top;*/
+        font-size: 2vw;
+        width: 2vw;
+        height: 1vw;
+    }
+
+#result-window {
+    transition: top 1s;
+    background: #2228;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width:  100%;
+    height: 100%;
+    top:   -100%;
+    left:    0px;
+    z-index: 102;}
+    #result-window-text {
+        font-size: 14vw;}
+    #spent-time {
+        font-size: 6vw;
+}
+
+#tetris-canvas {
+    width:  100vw;
+    height: 100vh;
+    cursor: none;
+}
